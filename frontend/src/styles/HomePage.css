@@ -1,0 +1,45 @@
+/* src/styles/HomePage.css */
+.container{
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: 100px 1fr 50px; /* Adjust row heights as needed */
+    min-height: 100vh;
+    background: black;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  main {
+    font-family: 'VCR OSD MONO', monospace;
+    grid-area: main;
+    padding: 20px;
+  }
+
+  p{
+    text-transform: uppercase;
+    font-size: 2.4vw;
+  }
+
+.fuzzy-overlay{
+  position: absolute;
+  inset: -200%;
+  background-image: url("../images/static.jpg");
+  opacity: 17%;
+  pointer-events: none;
+
+  animation: shift 0.1s linear infinite both;
+}
+
+@keyframes shift{
+  0% {
+    transform: translateX(10%) translateY(10%);
+  }
+
+  100%{
+    transform: translateX(-10%) translateY(-10%);
+  }
+}
