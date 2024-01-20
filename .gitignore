@@ -5,6 +5,9 @@
 backend/venv/
 frontend/node_modules/
 
+# Ignore compiled Python files
+__pycache__/
+
 # Build artifacts
 build/
 dist/
